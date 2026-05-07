@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@source "../views/**/*.blade.php";
+@source "../js/**/*.js";
+
+@theme {
+    --color-background: #0b0416;
+    --color-surface-dim: #07030e;
+    --color-surface-container: rgba(27, 26, 46, 0.65);
+    --color-surface-container-high: rgba(35, 34, 59, 0.8);
+    --color-primary: #cd5ff8;
+    --color-primary-fixed: #cd5ff8;
+    --color-primary-dim: #b241df;
+    --color-secondary: #38debb;
+    --color-on-surface: #f3f0f7;
+    --color-on-surface-variant: #ad9ebf;
+    --color-outline: rgba(205, 95, 248, 0.25);
+    --color-outline-variant: rgba(205, 95, 248, 0.1);
+
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-h1: 'Space Grotesk', sans-serif;
+    --font-h2: 'Space Grotesk', sans-serif;
+    --font-code-label: 'Space Grotesk', sans-serif;
+}
+
+@layer utilities {
+    .bg-grid-pattern {
+        background-image: linear-gradient(to right, rgba(205, 95, 248, 0.04) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(205, 95, 248, 0.04) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+
+    .glass-panel {
+        background: rgba(27, 26, 46, 0.6);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(205, 95, 248, 0.15);
+    }
+
+    .glow-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glow-hover:hover {
+        box-shadow: 0 0 30px rgba(205, 95, 248, 0.25);
+        border-color: rgba(205, 95, 248, 0.5);
+        transform: translateY(-4px);
+    }
+
+    .glow-text {
+        text-shadow: 0 0 15px rgba(205, 95, 248, 0.6);
+    }
+
+    .neon-border-glow {
+        box-shadow: 0 0 15px rgba(205, 95, 248, 0.15);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #0b0416;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(205, 95, 248, 0.4);
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(205, 95, 248, 0.7);
+    }
+}
+
+/* Base custom stars or glowing particles using keyframe animations */
+@keyframes floatParticle {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+        opacity: 0.8;
+    }
+}
+
+.particle {
+    animation: floatParticle 8s ease-in-out infinite;
+}
+
+.particle-slow {
+    animation: floatParticle 12s ease-in-out infinite;
+}
+
+.particle-fast {
+    animation: floatParticle 5s ease-in-out infinite;
+}
