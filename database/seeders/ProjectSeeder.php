@@ -12,8 +12,6 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
-        // Clear existing projects first to avoid duplication
-        Project::truncate();
 
         $projects = [
             [
@@ -54,7 +52,7 @@ class ProjectSeeder extends Seeder
                 'tags' => ['Laravel', 'Redis', 'MySQL', 'Stripe API', 'Pest PHP', 'Clean Architecture'],
                 'category' => 'Backend',
                 'github_url' => 'https://github.com/Chi-G/serve_ease',
-                'demo_url' => 'https://serveease.laravel.cloud',
+                'demo_url' => 'https://serve-ease.laravel.cloud',
             ],
             [
                 'title' => 'UPWEARLANE',
@@ -89,7 +87,10 @@ class ProjectSeeder extends Seeder
         ];
 
         foreach ($projects as $project) {
-            Project::create($project);
+            Project::updateOrCreate(
+                ['title' => $project['title']],
+                $project
+            );
         }
     }
 }
