@@ -14,7 +14,7 @@
             </h2>
             <div class="space-y-4 text-on-surface-variant text-base leading-relaxed">
                 <p>
-                    Hi Everyone, I am <strong class="text-white font-semibold">Chijindu Nwokeohuru</strong> from <strong class="text-white">Lagos, Nigeria</strong>.
+                    Hi Everyone, I am <strong class="text-white font-semibold">Chijindu Nwokeohuru</strong> from <strong class="text-white">Abuja, Nigeria</strong>.
                 </p>
                 <p>
                     I am a passionate Fullstack & DevOps Engineer with a proven track record of developing enterprise web products, optimizing complex query speeds, and managing cloud systems.
