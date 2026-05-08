@@ -32,12 +32,15 @@
 
         <!-- Bio Avatar Mockup -->
         <div class="lg:col-span-4 flex justify-center items-center relative select-none">
-            <div class="absolute w-64 h-64 bg-secondary/10 rounded-full blur-[70px] pointer-events-none"></div>
-            <div class="w-64 h-64 rounded-full border border-primary/30 bg-surface-dim/50 flex justify-center items-center text-primary text-9xl font-extrabold shadow-[0_0_30px_rgba(205,95,248,0.2)] animate-pulse">
+            <!-- Background Glow -->
+            <div class="absolute w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
+            
+            <!-- Raw Image Container -->
+            <div class="relative w-80 sm:w-96 transition-all duration-500 hover:scale-[1.02]">
                 <img 
                     src="{{ asset('about.png') }}" 
                     alt="Chijindu Nwokeohuru" 
-                    class="w-full h-full object-cover object-center"
+                    class="w-full h-auto object-contain"
                 >
             </div>
         </div>
@@ -140,7 +143,7 @@
             </div>
             <!-- Docker -->
             <div class="glass-panel rounded-xl border border-outline/10 p-5 flex flex-col justify-center items-center gap-3 text-center hover:border-primary/50 hover:shadow-[0_0_20px_rgba(205,95,248,0.15)] transition-all duration-300 select-none">
-                <span class="material-symbols-outlined text-secondary text-3xl">container</span>
+                <span class="material-symbols-outlined text-secondary text-3xl">grid_view</span>
                 <span class="font-code-label text-xs uppercase font-bold tracking-wide text-white">Docker</span>
             </div>
             <!-- TablePlus -->
