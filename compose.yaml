@@ -1,3 +1,14 @@
+# =========================================================================
+# LARAVEL CLOUD DEPLOYMENT HOOKS (For Production Reference)
+# =========================================================================
+# To automate migrations and seeding on every push in Laravel Cloud,
+# configure the following deployment hooks in your Cloud environment settings:
+#
+# deploy:
+#   - php artisan migrate --force
+#   - php artisan db:seed --class=ProjectSeeder --force
+# =========================================================================
+
 services:
     laravel.test:
         build:
