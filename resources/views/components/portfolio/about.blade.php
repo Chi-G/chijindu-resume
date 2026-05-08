@@ -34,7 +34,11 @@
         <div class="lg:col-span-4 flex justify-center items-center relative select-none">
             <div class="absolute w-64 h-64 bg-secondary/10 rounded-full blur-[70px] pointer-events-none"></div>
             <div class="w-64 h-64 rounded-full border border-primary/30 bg-surface-dim/50 flex justify-center items-center text-primary text-9xl font-extrabold shadow-[0_0_30px_rgba(205,95,248,0.2)] animate-pulse">
-                CN
+                <img 
+                    src="{{ asset('about.png') }}" 
+                    alt="Chijindu Nwokeohuru" 
+                    class="w-full h-full object-cover object-center"
+                >
             </div>
         </div>
     </div>
