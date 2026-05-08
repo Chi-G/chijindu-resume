@@ -3,13 +3,14 @@
 use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 new class extends Component
 {
-    #[Validate('required|min:3')]
+    #[Validate('required|min:2')]
     public $name = '';
 
-    #[Validate('required|email')]
+    #[Validate('required|email:rfc,dns')]
     public $email = '';
 
     public $subject = '';
@@ -23,14 +24,43 @@ new class extends Component
     {
         $this->validate();
 
+        // 1. Save message to Database
         DB::table('contact_messages')->insert([
             'name' => $this->name,
             'email' => $this->email,
             'subject' => $this->subject,
             'message' => $this->message,
-            'created_at' => now(),
+            'created_at' => now(), 
             'updated_at' => now(),
         ]);
+
+        // 2. Send email notification via Hostinger SMTP
+        try {
+            $visitorName = $this->name;
+            $visitorEmail = $this->email;
+            $emailSubject = $this->subject ?: 'New Portfolio Contact Message';
+            $messageBody = $this->message;
+
+            Mail::send([], [], function ($message) use ($visitorName, $visitorEmail, $emailSubject, $messageBody) {
+                $message->to('chijindu@forahia.com')
+                    ->subject("[Portfolio] {$emailSubject}")
+                    ->from(config('mail.from.address'), "{$visitorName} via Portfolio")
+                    ->replyTo($visitorEmail, $visitorName)
+                    ->html("
+                        <div style=\"font-family: sans-serif; padding: 20px; line-height: 1.6; color: #333;\">
+                            <h2 style=\"color: #cd5ff8; border-bottom: 2px solid #cd5ff8; padding-bottom: 10px;\">New Portfolio Message</h2>
+                            <p><strong>Name:</strong> {$visitorName}</p>
+                            <p><strong>Email:</strong> <a href=\"mailto:{$visitorEmail}\">{$visitorEmail}</a></p>
+                            <p><strong>Subject:</strong> {$emailSubject}</p>
+                            <div style=\"background: #f9f9f9; padding: 15px; border-radius: 5px; margin-top: 15px; border-left: 4px solid #cd5ff8;\">
+                                <p style=\"margin: 0; white-space: pre-wrap;\">" . e($messageBody) . "</p>
+                            </div>
+                        </div>
+                    ");
+            });
+        } catch (\Exception $e) {
+            logger()->error('Failed to send contact form email: ' . $e->getMessage());
+        }
 
         $this->reset(['name', 'email', 'subject', 'message']);
         $this->isSuccess = true;

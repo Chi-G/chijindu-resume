@@ -23,6 +23,13 @@
     --font-code-label: 'Space Grotesk', sans-serif;
 }
 
+/* @layer base {
+  [x-cloak] {
+    display: none !important;
+  }
+} */
+
+
 @layer utilities {
     .bg-grid-pattern {
         background-image: linear-gradient(to right, rgba(205, 95, 248, 0.04) 1px, transparent 1px),

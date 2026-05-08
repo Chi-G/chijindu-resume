@@ -8,7 +8,7 @@ new class extends Component
     public $selectedCategory = 'All';
     public $selectedProject = null;
 
-    public function selectCategory($category)
+    public function selectCategory($category) 
     {
         $this->selectedCategory = $category;
     }

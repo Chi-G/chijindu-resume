@@ -56,7 +56,7 @@
                 </div>
 
                 <!-- Dynamic Livewire Project Showcase Component -->
-                <livewire:⚡project-showcase />
+                <livewire:project-showcase />
             </div>
 
             <!-- RESUME TAB Component -->
@@ -78,7 +78,7 @@
                 </div>
 
                 <!-- Dynamic Livewire Contact Form Component -->
-                <livewire:⚡contact-form />
+                <livewire:contact-form />
             </div>
 
         </main>
