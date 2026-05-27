@@ -16,13 +16,13 @@
     <!-- Top Download CV Button -->
     <div class="flex justify-center mb-10">
         <a 
-            href="{{ asset('Chijindu_Nwokeohuru_CV_May2026.pdf') }}" 
-            download="Chijindu_Nwokeohuru_CV.pdf"
+            href="{{ asset('Chijindu_Nwokeohuru.pdf') }}" 
+            download="Chijindu_Nwokeohuru.pdf"
             class="bg-gradient-to-r from-primary-dim to-primary hover:from-primary hover:to-primary-dim text-white font-code-label font-bold text-xs uppercase tracking-widest px-8 py-4.5 rounded-lg transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(205,95,248,0.35)] cursor-pointer"
         >
             <span class="material-symbols-outlined text-base">download</span> Download CV
         </a>
-    </div> 
+    </div>  
 
     <!-- Timeline Resume Representation -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
