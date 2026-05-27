@@ -4,3 +4,14 @@ services:
     env: docker
     plan: free
     branch: main
+    envVars:
+      - key: APP_KEY
+        value: "base64:Rou0y1ujvstnT3dWPCGMJExAlR+0CdRCMx+/4qyuJqE="
+      - key: APP_ENV
+        value: "production"
+      - key: APP_DEBUG
+        value: "false"
+      - key: DB_CONNECTION
+        value: "sqlite"
+      - key: DB_DATABASE
+        value: "/var/www/html/database/database.sqlite"
