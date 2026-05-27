@@ -22,7 +22,7 @@ class ProjectSeeder extends Seeder
                 'tags' => ['Laravel 12', 'React', 'Google Gemini AI', 'Pusher', 'PWA', 'MySQL'],
                 'category' => 'Fullstack',
                 'github_url' => 'https://github.com/Chi-G/EcoTrack-NG',
-                'demo_url' => 'https:/.forahia.com/ecotrack',
+                'demo_url' => 'https://forahia.com/ecotrack',
             ],
             [
                 'title' => 'FlowSlot',
@@ -32,7 +32,7 @@ class ProjectSeeder extends Seeder
                 'tags' => ['Laravel', 'React', 'Inertia.js', 'MySQL', 'Redis', 'GitHub Actions'],
                 'category' => 'Fullstack',
                 'github_url' => 'https://github.com/Chi-G/FlowSlot',
-                'demo_url' => 'https:/.forahia.com/flowslot',
+                'demo_url' => 'https://forahia.com/flowslot',
             ],
             [
                 'title' => 'FORAFIX',
@@ -42,7 +42,7 @@ class ProjectSeeder extends Seeder
                 'tags' => ['Laravel API', 'React', 'Flutter', 'MySQL Spatial', 'Pusher', 'Paystack'],
                 'category' => 'Fullstack',
                 'github_url' => 'https://github.com/Chi-G/forafix-web',
-                'demo_url' => 'https:/.forahia.com/forafix',
+                'demo_url' => 'https://forahia.com/forafix',
             ],
             [
                 'title' => 'ServeEase',
@@ -52,7 +52,7 @@ class ProjectSeeder extends Seeder
                 'tags' => ['Laravel', 'Redis', 'MySQL', 'Stripe API', 'Pest PHP', 'Clean Architecture'],
                 'category' => 'Backend',
                 'github_url' => 'https://github.com/Chi-G/serve_ease',
-                'demo_url' => 'https:/.forahia.com/serve-ease',
+                'demo_url' => 'https://forahia.com/serve-ease',
             ],
             [
                 'title' => 'UPWEARLANE',
