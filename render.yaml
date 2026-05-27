@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: chijindu-resume-docker
+    name: chijindu
     env: docker
     plan: free
     branch: main
