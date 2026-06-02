@@ -51,6 +51,11 @@ RUN composer install --no-dev --optimize-autoloader
 RUN touch database/database.sqlite \
     && APP_KEY=base64:Rou0y1ujvstnT3dWPCGMJExAlR+0CdRCMx+/4qyuJqE= DB_CONNECTION=sqlite DB_DATABASE=/var/www/html/database/database.sqlite php artisan migrate:fresh --seed --force
 
+# Optimize Laravel and Clear Cache
+RUN php artisan optimize:clear \
+    && php artisan view:cache \
+    && php artisan event:cache
+
 # Set Permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage \
