@@ -17,6 +17,9 @@
         <!-- Livewire & Tailwind Styles -->
         @livewireStyles
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <!-- Alpine.js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
     <body 
         class="bg-background text-on-surface antialiased bg-grid-pattern min-h-screen relative overflow-x-hidden flex flex-col justify-between"

@@ -83,7 +83,50 @@
                 <!-- Animated Code Brackets & Tech Elements -->
                 <path d="M140 180L100 220L140 260" stroke="#cd5ff8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M360 180L400 220L360 260" stroke="#cd5ff8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M220 300L280 140" stroke="#38debb" stroke-width="6" stroke-linecap="round"/>
+                <path d="M220 300L280 140" stroke="#38debb<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Chijindu Nwokeohuru - Portfolio</title>
+                    
+                    <!-- Your Tailwind/CSS loading -->
+                    @vite(['resources/css/app.css', 'resources/js/app.js'])
+                
+                    <!-- Add Alpine.js via CDN (if you haven't compiled it into app.js) -->
+                    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+                
+                    <!-- Prevent flickering before Alpine loads -->
+                    <style>
+                        [x-cloak] { display: none !important; }
+                    </style>
+                </head>
+                <body class="bg-background text-on-surface antialiased">
+                
+                    <!-- 
+                      IMPORTANT: This parent wrapper initializes the state 
+                      used by the navbar, hero, about, and resume components 
+                    -->
+                    <div x-data="{ activeTab: 'home', isMobileMenuOpen: false }" x-cloak>
+                        
+                        <!-- Navbar -->
+                        <x-portfolio.navbar />
+                
+                        <!-- Main Content Area -->
+                        <main class="min-h-screen">
+                            <x-portfolio.hero />
+                            <x-portfolio.about />
+                            <x-portfolio.resume />
+                            <!-- Other components like projects, contact, etc. -->
+                        </main>
+                
+                        <!-- Footer -->
+                        <x-portfolio.footer />
+                        
+                    </div>
+                
+                </body>
+                </html>
                 
                 <!-- Glowing Stars inside vector -->
                 <path d="M250 80L253 87L260 90L253 93L250 100L247 93L240 90L247 87L250 80Z" fill="#38debb" class="particle"/>
@@ -96,7 +139,51 @@
     <div class="space-y-12 pt-16 border-t border-outline/10">
         <div class="text-center max-w-3xl mx-auto space-y-4">
             <h2 class="font-h1 text-3xl sm:text-4xl font-extrabold text-white">
-                LET ME <span class="text-primary font-extrabold">INTRODUCE</span> MYSELF
+                LET ME <span class="text-primary font-extrabold">INTRODUCE<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Chijindu Nwokeohuru - Portfolio</title>
+                    
+                    <!-- Your Tailwind/CSS loading -->
+                    @vite(['resources/css/app.css', 'resources/js/app.js'])
+                
+                    <!-- Add Alpine.js via CDN (if you haven't compiled it into app.js) -->
+                    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+                
+                    <!-- Prevent flickering before Alpine loads -->
+                    <style>
+                        [x-cloak] { display: none !important; }
+                    </style>
+                </head>
+                <body class="bg-background text-on-surface antialiased">
+                
+                    <!-- 
+                      IMPORTANT: This parent wrapper initializes the state 
+                      used by the navbar, hero, about, and resume components 
+                    -->
+                    <div x-data="{ activeTab: 'home', isMobileMenuOpen: false }" x-cloak>
+                        
+                        <!-- Navbar -->
+                        <x-portfolio.navbar />
+                
+                        <!-- Main Content Area -->
+                        <main class="min-h-screen">
+                            <x-portfolio.hero />
+                            <x-portfolio.about />
+                            <x-portfolio.resume />
+                            <!-- Other components like projects, contact, etc. -->
+                        </main>
+                
+                        <!-- Footer -->
+                        <x-portfolio.footer />
+                        
+                    </div>
+                
+                </body>
+                </html>
+                </span> MYSELF
             </h2>
             <p class="text-on-surface-variant text-base sm:text-lg leading-relaxed">
                 A high-performing Fullstack Engineer with a true love for crafting elegant server architectures, optimal databases, and premium digital solutions.
