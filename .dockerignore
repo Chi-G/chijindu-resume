@@ -10,3 +10,6 @@
 docker
 docker-compose.yml
 compose.yaml
+/tests
+.phpunit.result.cache
+phpunit.xml
